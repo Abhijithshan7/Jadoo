@@ -1,0 +1,157 @@
+.topSelling {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    max-width: 1440px;
+    margin: 0 auto;
+  
+    .header {
+      margin-bottom: 40px;
+  
+      h4 {
+        font-family: var(--font-popins);
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: #5e6282;
+        margin-bottom: 10px;
+      }
+  
+      h2 {
+        font-family: var(--font-volkhov);
+        font-weight: 700;
+        font-size: 50px;
+        text-transform: capitalize;
+        text-align: center;
+        color: #14183e;
+      }
+    }
+  
+    .productContainer {
+        background-image: url("../components/assets/Decore2.png");
+        background-size: 100px 200px; // Set specific width and height
+        background-position: 90% 80%;
+        background-repeat: no-repeat;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+      @media (max-width: 1100) {
+        background-image: none; // Remove background image
+      }
+    }
+  
+    .productCard {
+      position: relative;
+      width: 100%;
+      max-width: 315px;
+      height: 457px;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .imageWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+  
+      .productCardContent {
+        padding: 20px;
+        background-color: #fff;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+  
+        .destinationInfo {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+  
+          h3 {
+            font-family: var(--font-popins);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 125%;
+            color: #5e6282;
+            margin: 0;
+            text-align: left;
+          }
+        }
+  
+        .priceDate {
+          display: flex;
+          justify-content: space-between;
+  
+          p {
+            font-family: var(--font-popins);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 125%;
+            color: #5e6282;
+            margin: 0;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 40px 15px;
+  
+      .header {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+  
+      .productContainer {
+        background-image: none;
+      }
+  
+      .productCard {
+        height: 400px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .header {
+        h4 {
+          font-size: 1rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+  
+      .productCard {
+        height: 350px;
+        
+        .productCardContent {
+          padding: 15px;
+          
+          .destinationInfo h3 {
+            font-size: 16px;
+          }
+          
+          .priceDate p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,161 @@
+@import 'variables';
+
+.footer {
+  background-color: $white;
+  padding: 60px 0 30px;
+  color: black;
+  font-family: $font-family-base;
+
+  .brandSection {
+    margin-bottom: 30px;
+
+    .brandName {
+      font-family: var(--font-popins);
+      font-weight: 500;
+      font-size: 44px;
+      color: #181e4b;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-family: var(--font-popins);
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 125%;
+      color: #5e6282;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+  }
+
+  .linkSection {
+    margin-bottom: 30px;
+
+    .SocialMediaIcons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .Icons {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+
+        &:hover {
+          background: conic-gradient(from 90deg,
+              rgba(184, 210, 241, 1) 0deg,
+              rgba(242, 137, 170, 1) 60deg,
+              rgba(198, 139, 240, 1) 106.091deg,
+              rgba(209, 100, 218, 1) 153.75deg,
+              rgba(201, 99, 232, 1) 221.25deg,
+              rgba(191, 194, 232, 1) 258.75deg,
+              rgba(255, 201, 153, 1) 288.75deg,
+              rgba(208, 216, 201, 1) 315deg,
+              rgba(186, 208, 241, 1) 334.134deg,
+              rgba(206, 216, 203, 1) 358.968deg,
+              rgba(255, 255, 255, 0) 360deg);
+        }
+      }
+    }
+
+    .sectionTitle {
+      font-family: var(--font-popins);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #080809;
+    }
+
+    .linkList {
+
+      font-family: var(--font-popins);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 125%;
+      color: #5e6282;
+
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 12px;
+
+        a {
+          color: #5E6282;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: black;
+          }
+        }
+
+     
+        }
+        .appStore{
+          display: flex;
+          gap: 20px;
+
+          @media (max-width: 850px) {
+            align-items: center;
+            flex-direction: column;          
+          }
+      }
+    }
+  }
+
+  .copyrightRow {
+    // margin-top: 40px;
+    // border-top: 1px solid black;
+    padding-top: 20px;
+
+    .copyright {
+      font-family: var(--font-popins);
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: #5E6282;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+  .footer {
+    .linkSection {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 40px 0 20px;
+
+    .brandSection {
+      text-align: center;
+      margin: 0 auto 30px;
+
+      .tagline {
+        margin: 0 auto;
+      }
+    }
+
+    .linkSection {
+      text-align: center;
+    }
+  }
+}

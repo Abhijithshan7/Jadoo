@@ -1,0 +1,135 @@
+// Import variables and mixins first
+@import 'variables';
+@import 'mixins';
+
+// Bootstrap overrides and customizations
+:root {
+  // Bootstrap variable overrides
+  --bs-primary: #{$primary};
+  --bs-secondary: #{$secondary};
+  --bs-font-sans-serif: #{$font-family-sans-serif};
+  --bs-font-serif: #{$font-family-serif};
+  --bs-body-font-family: #{$font-family-base};
+  --bs-body-bg: #{$light};
+  --bs-body-color: #{$dark};
+}
+
+// Import Bootstrap after variables
+@import 'bootstrap/scss/bootstrap';
+
+// Base styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// body {
+//   font-family: $font-family-base;
+//   font-size: $font-size-base;
+//   line-height: $line-height-base;
+//   color: $dark;
+//   background-color: $light;
+//   overflow-x: hidden;
+// }
+
+// Typography
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: $headings-font-family;
+//   font-weight: $headings-font-weight;
+//   line-height: $headings-line-height;
+//   color: $headings-color;
+//   margin-bottom: $spacer;
+// }
+
+p {
+  margin-bottom: $spacer;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: $transition-base;
+
+  &:hover {
+    color: darken($primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Layout
+.container {
+  padding-left: $spacer * 1.5;
+  padding-right: $spacer * 1.5;
+}
+
+section {
+  padding: $spacer * 5 0;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    padding: $spacer * 3 0;
+  }
+}
+
+// Utility classes
+.text-serif {
+  font-family: $font-family-serif;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 15%) 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -10px rgba($dark, 0.1);
+}
+
+// Custom scrollbar for the entire site
+body {
+  @include custom-scrollbar($primary, rgba($primary, 0.1));
+}
+
+// Form elements
+.form-control {
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+}
+
+// Buttons
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.5rem;
+  transition: $transition-base;
+}
+
+.btn-primary {
+  @include button-variant($primary, $primary);
+}
+
+// Images
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Animation classes
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

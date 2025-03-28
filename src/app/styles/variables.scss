@@ -1,0 +1,80 @@
+// Colors
+$primary: #DF6951;           // Main brand color (blue)
+$secondary: #F1A501;         // Secondary color (green)
+$dark: #2c3e50;              // Dark color for text
+$light: #ecf0f1;             // Light background color
+$danger: #e74c3c;            // Error/alert color
+$warning: #f39c12;           // Warning color
+$info: #1abc9c;              // Info color
+$white: #ffffff;
+$black: #000000;
+
+// Theme colors map (for Bootstrap compatibility)
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $secondary,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+// Typography
+$font-family-sans-serif: 'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: 'Playfair Display', Georgia, "Times New Roman", serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 1rem;       // 16px
+$line-height-base: 1.6;
+
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$headings-color: $dark;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6
+);
+
+// Borders
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+// Breakpoints (matches Bootstrap defaults)
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Shadows
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
+
+// Transitions
+$transition-base: all 0.3s ease-in-out;
+$transition-fade: opacity 0.15s linear;

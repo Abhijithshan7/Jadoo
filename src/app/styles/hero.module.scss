@@ -1,0 +1,138 @@
+@import 'variables';
+
+.hero {
+  background-image: url("../components/assets/Decore.png");
+  background-position: right top ; 
+  background-repeat: no-repeat; 
+  background-size: auto; 
+  padding: 100px 0;
+  background-color: #fff;
+  
+
+  .Herobgimg {
+    background-image: url("../components/assets/Decore.png");
+    background-position: 40px -80px ; /* Left 40px, Top 150px */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: auto; /* Keeps the image's original size */
+}
+
+  @media (max-width: 991px) {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 991px) {
+      align-items: center;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
+    font-family: var(--font-popins);
+  }
+
+  .title {
+    color: #181E4B;
+    font-family: var(--font-volkhov);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 5.25rem);
+    line-height: 1.2;
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  .description {
+    color: #5E6282;
+    font-family: var(--font-popins);
+    font-weight: 500;
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  .actionButtons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+  }
+
+  .primaryBtn {
+    border-radius: 10px;
+    width: 170px;
+    height: 60px;
+    box-shadow: 0 20px 35px 0 rgba(241, 165, 1, 0.15);
+    background: #f1a501;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    // &:hover {
+    //   transform: translateY(-5px);
+    //   box-shadow: 0 25px 40px 0 rgba(241, 165, 1, 0.2);
+    // }
+  }
+
+  .playButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.0625rem;
+    color: #686d77;
+    transition: color 0.3s ease;
+
+    // &:hover {
+    //   color: $primary;
+    // }
+  }
+
+  .playButtonIcon {
+    background-color: $primary;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
+  }
+
+  .heroImage {
+    max-width: 500px;
+    margin: 0 auto;
+    
+    @media (max-width: 991px) {
+      margin-top: 40px;
+    }
+  }
+}

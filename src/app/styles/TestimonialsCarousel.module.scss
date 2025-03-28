@@ -1,0 +1,195 @@
+@import "variables";
+
+
+.testimonialsSection {
+  padding: 80px 100;
+  background-color: #fff;
+
+  @media (max-width: 850px) {
+    
+    padding: 40px 30px;
+  }
+
+  .subtitle {
+    font-family: var(--font-popins);
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #5e6282;
+  }
+
+  .mainTitle {
+    font-family: var(--font-volkhov);
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: capitalize;
+    color: #14183e;
+    margin-bottom: 2rem;
+  }
+
+  .dots {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .dotDart {
+      background-color: #39425D;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+    }
+
+    .dot {
+      background-color: #E5E5E5;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+
+    }
+  }
+}
+
+.carouselContainer {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+
+  @media (max-width: 850px) {
+    height: 600px;
+    margin: 40px 30px;
+  }
+}
+
+.carouselTrack {
+  position: relative;
+  height: 100%;
+
+
+}
+
+.carouselCard {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 300px;
+
+  &.activeCard {
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 2;
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    // height: 300px;
+  }
+
+  &.prevCard {
+    border: 1px solid #dad4d488;
+    background-color: #F7F7F7;
+    top: 30%;
+    transform: scale(0.9);
+    z-index: 1;
+    opacity: 1;
+    // height: 250px;
+  }
+
+  &.nextCard {
+    border: 1px solid #dad4d450;
+    background-color: #F7F7F7;
+    top: 40%;
+    transform: scale(0.8);
+    z-index: 0;
+    opacity: 0.5;
+    // height: 200px;
+  }
+}
+
+.cardContent {
+  display: flex;
+  // flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.cardQuote {
+  flex-grow: 1;
+  font-family: var(--font-popins);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  color: #5e6282;
+}
+
+.cardProfile {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardName {
+  font-family: var(--font-popins);
+  font-weight: 600;
+  font-size: 18px;
+  color: #5e6282;
+  margin-bottom: 0.25rem;
+}
+
+.cardLocation {
+  font-family: var(--font-popins);
+  font-weight: 500;
+  font-size: 14px;
+  color: #5e6282;
+}
+
+.carouselControls {
+  position: absolute;
+  right: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  z-index: 3;
+}
+
+.arrowButton {
+  cursor: pointer;
+  // width: 40px;
+  // height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+
+}

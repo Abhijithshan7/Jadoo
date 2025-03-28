@@ -36,7 +36,15 @@ const Navbar = () => {
           <span className={styles.togglerIcon}></span>
         </button>
 
+        {/* Mobile Menu */}
         <div className={`${styles.navbarCollapse} ${isOpen ? styles.show : ""}`}>
+          {/* Close Button for Mobile */}
+          {isOpen && (
+  <button className={styles.closeButton} onClick={() => setIsOpen(false)}>
+    ✕
+  </button>
+)}
+
           <ul className={styles.navbarNav}>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>Destinations</Link>

@@ -104,9 +104,13 @@
           display: flex;
           gap: 20px;
 
-          @media (max-width: 850px) {
-            align-items: center;
+          @media (max-width: 1200px) {
+            align-items: start;
             flex-direction: column;          
+          }
+          @media (max-width: 722) {
+            align-items: center;
+                  
           }
       }
     }

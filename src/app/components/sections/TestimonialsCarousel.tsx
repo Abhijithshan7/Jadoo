@@ -48,7 +48,7 @@ const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
 			name: "Sarah Johnson",
 			location: "Toronto, Canada",
 			quote:
-				"A game-changing product that exceeded all my expectations. The team's professionalism and innovative approach truly set them apart from the competition.",
+			"Incredible experience with this service. Their attention to detail and customer support is unmatched. I highly recommend them to anyone looking for top-quality solutions.",
 			image: profile2,
 		},
 		{
@@ -56,7 +56,7 @@ const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
 			name: "Carlos Rodriguez",
 			location: "Madrid, Spain",
 			quote:
-				"Transformative service that delivered exactly what was promised. Their commitment to excellence is evident in every interaction.",
+			"Incredible experience with this service. Their attention to detail and customer support is unmatched. I highly recommend them to anyone looking for top-quality solutions.",
 			image: profile3,
 		},
 	];
@@ -115,7 +115,7 @@ const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
 		<div className={styles.testimonialsSection}>
 			<div >
 				<div className="row">
-					<div className="col-md-6">
+					<div className="col-md-6 mb-5">
 						<h3 className={`${styles.subtitle}`}> {subTitle}</h3>
 						<h1 className={styles.mainTitle}>{title}</h1>
 						<div className={styles.dots}>

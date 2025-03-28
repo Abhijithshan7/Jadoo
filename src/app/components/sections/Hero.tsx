@@ -1,15 +1,12 @@
-import React from 'react';
 import Image from 'next/image';
 
 import styles from "../../styles/hero.module.scss";
 import decorImage from "../assets/Image.png";
 import polygonIcon from "../assets/Polygon.png"; 
 
-interface HeroProps {
 
-}
 
-const Hero: React.FC<HeroProps> = () => {
+const Hero= () => {
   return (
     <section className={`${styles.hero} d-flex align-items-center`}>
              {/* <div className={styles.Herobgimg}> */}

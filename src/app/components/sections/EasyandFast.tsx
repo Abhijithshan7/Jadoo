@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../styles/easyandFast.module.scss";
 import Image from "next/image";
 import selection from "../assets/selection.png";
@@ -16,7 +15,7 @@ import sendIcon from "../assets/sendIcon.png";
 // Define interface for step data
 interface StepData {
 	id: number;
-	icon: StaticImageData;
+	icon: any;
 	title: string;
 	description: string;
 	iconColor: string;
@@ -28,7 +27,8 @@ interface TripData {
 	title: string;
 	date: string;
 	author: string;
-	image: StaticImageData;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	image: any;
 	people: number;
 }
 
@@ -36,7 +36,8 @@ interface TripData {
 interface OngoingTripData {
 	id: number;
 	title: string;
-	image: StaticImageData;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	image: any;
 	progress: number;
 }
 

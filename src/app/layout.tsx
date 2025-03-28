@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono , Poppins ,Volkhov } from "next/font/google";
+import { Poppins ,Volkhov } from "next/font/google";
 import "./globals.css";
 
 const fontPoppins = Poppins ({
+  subsets:['latin'],
   variable: "--font-popins",
   weight: ["100", "300", "400", "600", "700","800", "900"]
 });
 const fontVolkhov = Volkhov ({
+  subsets:['latin'],
   variable: "--font-volkhov",
   weight: [ "400", "700"]
 });
-
-
 
 export const metadata: Metadata = {
   title: "Jadoo",

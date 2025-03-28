@@ -11,8 +11,8 @@ interface Product {
   name: string;
   price: string;
   date: string;
-  image: StaticImageData;
-  image2: StaticImageData;
+  image: any;
+  image2: any;
 }
 
 const topSellingProducts: Product[] = [

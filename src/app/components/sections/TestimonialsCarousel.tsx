@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import type React from "react";
+import { useState } from "react";
+import Image, { type StaticImageData } from "next/image";
 import styles from "../../styles/TestimonialsCarousel.module.scss";
 
 // Enhanced Testimonial interface
